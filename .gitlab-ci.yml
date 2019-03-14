@@ -1,6 +1,11 @@
 
 image: node:10-alpine
 
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+  - /usr/local/share/.cache
+
 stages:
 - "Install"
 - "Run tests"
@@ -9,12 +14,16 @@ stages:
 Install:
   stage: "Install"
   script:
-  - yarn
+  - yarn cache dir
+  - yarn --frozen-lockfile
+  artifacts:
+    expire_in: "1 day"
+    paths:
+    - node_modules
 
 Run tests:
   stage: "Run tests"
   script:
-  - yarn
   - yarn test
   - yarn convert-mapping
 
@@ -22,6 +31,5 @@ Deploy new mappings:
   stage: "Deploy new mappings"
   when: manual
   script:
-  - yarn
   - yarn deploy
 
