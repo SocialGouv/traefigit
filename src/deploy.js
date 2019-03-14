@@ -15,20 +15,23 @@ const updateTraefikFromMapping = async () => {
     } mappings on ${TRAEFIK_URL}...`
   );
 
-  return await fetch(TRAEFIK_URL, {
-    method: "PUT",
-    body: JSON.stringify(mapping)
-  })
-    .then(r => r.json())
-    .then(json => {
-      console.log(`✔ traefik configuration updated`);
+  try {
+    await fetch(TRAEFIK_URL, {
+      method: "PUT",
+      body: JSON.stringify(mapping)
     })
-    .catch(e => {
-      console.log("𝙓 ERROR: ", e);
-      throw e;
-    });
+    
+    console.log(`✔ traefik configuration updated`);
+  } catch(e) {
+    console.log("𝙓 ERROR: ", e);
+    throw e;
+  };
 };
 
 if (require.main === module) {
-  updateTraefikFromMapping();
+  try {
+    updateTraefikFromMapping();
+  } catch(e) {
+    process.exit(1);
+  };
 }
