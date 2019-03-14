@@ -1,0 +1,19 @@
+
+logLevel = "DEBUG"
+
+[traefikLog]
+  filePath = "/path/to/traefik.log"
+  format   = "json"
+
+defaultEntryPoints = ["http"]
+
+[entryPoints]
+  [entryPoints.http]
+  address = ":80"
+
+[rest]
+  entryPoint = "traefik"
+
+[api]
+  entryPoint = "traefik"
+  dashboard = true

@@ -8,5 +8,13 @@
     "lodash.pick": "^4.4.0",
     "node-fetch": "^2.3.0",
     "toml": "^3.0.0"
+  },
+  "devDependencies": {
+    "jest-cli": "^24.5.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "convert-mapping": "node ./src/convertMapping",
+    "deploy": "node ./src/deploy"
   }
 }

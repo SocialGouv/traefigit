@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should work 1`] = `
+Object {
+  "backends": Object {
+    "website-doc": Object {
+      "servers": Object {
+        "server0": Object {
+          "url": "https://hello.github.io",
+        },
+      },
+    },
+    "website-metabase": Object {
+      "servers": Object {
+        "server0": Object {
+          "url": "http://1.2.3.4:8080",
+        },
+      },
+    },
+  },
+  "frontends": Object {
+    "website-doc": Object {
+      "backend": "website-doc",
+      "routes": Object {
+        "route0": Object {
+          "rule": "Host:website-doc.domain.fr; AddPrefix: /website-doc",
+        },
+      },
+    },
+    "website-metabase": Object {
+      "backend": "website-metabase",
+      "basicAuth": Array [
+        "code:$apr1$gSzefXeHY$YhplnNO25blGcAx/vb0",
+      ],
+      "passHostHeader": true,
+      "routes": Object {
+        "route0": Object {
+          "rule": "Host:website-metabase.domain.fr",
+        },
+      },
+    },
+  },
+}
+`;
