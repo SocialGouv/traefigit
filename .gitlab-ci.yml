@@ -1,0 +1,25 @@
+
+image: node:10-alpine
+
+stages:
+- "Install"
+- "Run tests"
+- "Deploy new mappings"
+
+Install:
+  stage: "Install"
+  script:
+  - yarn
+
+Run tests:
+  stage: "Run tests"
+  script:
+  - yarn test
+  - yarn convert-mapping
+
+Deploy new mappings:
+  stage: "Deploy new mappings"
+  when: manual
+  script:
+  - yarn deploy
+
