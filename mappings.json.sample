@@ -1,0 +1,14 @@
+[
+  {
+    "id": "website-doc",
+    "backend": "https://hello.github.io",
+    "rule": "Host:website-doc.domain.fr; AddPrefix: /website-doc"
+  },
+  {
+    "id": "website-metabase",
+    "backend": "http://1.2.3.4:8080",
+    "passHostHeader": true,
+    "basicAuth": ["code:$apr1$gSzefXeHY$YhplnNO25blGcAx/vb0"],
+    "rule": "Host:website-metabase.domain.fr"
+  }
+]

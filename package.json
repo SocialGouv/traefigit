@@ -1,0 +1,12 @@
+{
+  "name": "traefigit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Julien Bouquillon <julien.bouquillon@sg.social.gouv.fr>",
+  "license": "MIT",
+  "dependencies": {
+    "lodash.pick": "^4.4.0",
+    "node-fetch": "^2.3.0",
+    "toml": "^3.0.0"
+  }
+}
