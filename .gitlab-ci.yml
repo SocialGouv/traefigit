@@ -14,6 +14,7 @@ Install:
 Run tests:
   stage: "Run tests"
   script:
+  - yarn
   - yarn test
   - yarn convert-mapping
 
@@ -21,5 +22,6 @@ Deploy new mappings:
   stage: "Deploy new mappings"
   when: manual
   script:
+  - yarn
   - yarn deploy
 
