@@ -29,8 +29,7 @@ Run tests:
 Deploy new mappings:
   stage: "Deploy new mappings"
   only:
-    changes:
-      - mapping.json
+    - local
   script:
   - yarn convert-mapping
   - yarn deploy
