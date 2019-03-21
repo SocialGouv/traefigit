@@ -15,10 +15,16 @@ const updateTraefikFromMapping = async () => {
     } mappings on ${TRAEFIK_URL}...`
   );
 
-  await fetch(TRAEFIK_URL, {
+  const response = await fetch(TRAEFIK_URL, {
     method: "PUT",
     body: JSON.stringify(mapping)
   })
+
+  if (response.status > 300) {
+    const error = new Error(response.statusText || response.status)
+    error.response = response
+    throw error;
+  }
 
   console.log(`✔ traefik configuration updated`);
 };
