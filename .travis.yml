@@ -18,5 +18,4 @@ jobs:
         - yarn --frozen-lockfile
       script:
         - yarn test --coverage
-        - yarn convert-mapping
       after_script: npx codecov
