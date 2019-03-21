@@ -4,7 +4,7 @@ image: node:10-alpine
 cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
-  - /usr/local/share/.cache
+  - .yarn-cache
 
 stages:
 - "Install"
@@ -14,8 +14,7 @@ stages:
 Install:
   stage: "Install"
   script:
-  - yarn cache dir
-  - yarn --frozen-lockfile
+  - yarn --frozen-lockfile --cache-folder .yarn-cache
   artifacts:
     expire_in: "1 day"
     paths:
