@@ -16,5 +16,10 @@
     "test": "jest",
     "convert-mapping": "node ./src/convertMapping",
     "deploy": "node ./src/deploy"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ]
   }
 }
