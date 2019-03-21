@@ -25,6 +25,8 @@ Run tests:
   stage: "Run tests"
   script:
   - yarn test
+  after_script:
+  - npx codecov
 
 Deploy new mappings:
   stage: "Deploy new mappings"
