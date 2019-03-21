@@ -14,6 +14,17 @@ Run `node deploy` to update traefik configuration from `mapping.json` or let you
 
 ⚠️ In `trafik.toml` config, be sure to enable `rest` provider.
 
+⚠️ when you restart traefik, it will lost very REST-based config.
+So if you use docker-compose, here's a way to trigger your CI when traefik is ready :
+
+```sh
+trigger:
+  image: byrnedo/alpine-curl
+  depends_on:
+    - proxy
+  command: -X POST -F token=abcdef -F ref=local https://gitlab.pouet.pouet/api/v4/projects/42/trigger/pipeline
+```
+
 ## Dev
 
 run a local traefik instance to play with. see [sample traefik.toml](./traefik.toml)
