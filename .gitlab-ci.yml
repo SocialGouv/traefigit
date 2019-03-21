@@ -25,11 +25,13 @@ Run tests:
   stage: "Run tests"
   script:
   - yarn test
-  - yarn convert-mapping
 
 Deploy new mappings:
   stage: "Deploy new mappings"
-  when: manual
+  only:
+    changes:
+      - mapping.json
   script:
+  - yarn convert-mapping
   - yarn deploy
 
