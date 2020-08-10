@@ -10,7 +10,7 @@
     "toml": "^3.0.0"
   },
   "devDependencies": {
-    "jest-cli": "^26.2.2"
+    "jest-cli": "^26.3.0"
   },
   "scripts": {
     "test": "jest",
