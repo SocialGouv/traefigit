@@ -1,3 +1,23 @@
+:skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull:
+
+<br>
+<br>
+
+<h3 align=center>DEPRECATED <br> In favor of <a href=https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations />
+NGINX Ingress Controller annotations</a><br></h3>
+
+<br>
+<br>
+
+:skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull::skull:
+
+<br>
+<br>
+<br>
+<br>
+
+---
+
 # traefigit
 
 Maintain and update your [traefik.io](https://traefik.io) basic rules with GIT + CI.
